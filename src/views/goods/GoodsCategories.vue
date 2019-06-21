@@ -23,7 +23,7 @@
           </template>
         </el-table-column>
       </el-table>
-      <!-- <el-pagination
+      <el-pagination
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
         :current-page="queryInfo.pagenum"
@@ -31,7 +31,7 @@
         :page-size="queryInfo.pagesize"
         layout="total, sizes, prev, pager, next, jumper"
         :total="total"
-      ></el-pagination> -->
+      ></el-pagination>
     </el-card>
     </div>
 </template>
