@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import './plugins/element.js'
 import axios from 'axios'
+import treeTable from 'vue-table-with-tree-grid'
 import './assets/fonts/iconfont.css'
 import './assets/css/global.css'
 
@@ -28,6 +29,8 @@ Vue.filter('dateFormat', (originVal) => {
 
   return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
 })
+
+Vue.component('tree-table', treeTable)
 
 new Vue({
   router,

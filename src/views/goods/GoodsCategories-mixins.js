@@ -2,11 +2,36 @@ export default {
     data() {
         return {
             queryInfo: {
+                type: '',
                 pagenum: 1,
-                pagesize: 8
+                pagesize: 5
             },
             categorieslist: [],
-            total: 0
+            total: 0,
+            columns: [
+                {
+                  label: '分类名称',
+                  prop: 'cat_name'
+                },
+                {
+                  label: '是否有效"',
+                  prop: 'cat_deleted',
+                  type: 'template',
+                  template: 'isno',
+                },
+                {
+                  label: '排序',
+                  prop: 'cat_level',
+                  type: 'template',
+                  template: 'paixu',
+                },
+                {
+                  label: '操作',
+                  prop: 'likes',
+                  type: 'template',
+                  template: 'opt',
+                },
+              ]
         }
     },
     created() {
@@ -23,11 +48,11 @@ export default {
         addCategories() {
 
         },
-        handleSizeChange(size) {
-            console.log(size)
-            this.queryInfo.pagesize = size
-            this.getCategoriesList()
-        },
+        // handleSizeChange(size) {
+        //     console.log(size)
+        //     this.queryInfo.pagesize = size
+        //     this.getCategoriesList()
+        // },
         handleCurrentChange(num) {
             this.queryInfo.pagenum = num
             this.getCategoriesList()
