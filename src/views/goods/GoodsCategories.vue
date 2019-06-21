@@ -11,7 +11,7 @@
           <el-button type="primary" size="middle" @click="addCategories">添加商品</el-button>
         </el-col>
       </el-row>
-      <!-- <el-table :data="categorieslist" border stripe>
+      <el-table :data="categorieslist" border stripe>
         <el-table-column type="index"></el-table-column>
         <el-table-column label="分类名称" prop="cat_name" width="500"></el-table-column>
         <el-table-column label="是否有效" prop="goods_price"></el-table-column>
@@ -22,7 +22,7 @@
             <el-button type="danger" size="small" icon="el-icon-delete"></el-button>
           </template>
         </el-table-column>
-      </el-table> -->
+      </el-table>
       <!-- <el-pagination
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
