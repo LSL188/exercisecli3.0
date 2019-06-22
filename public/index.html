@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>exercise_cli3.0</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css">
+    <script src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but exercise_cli3.0 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <script>
+      NProgress.start();
+      onload = function() {
+        NProgress.done();
+      }
+    </script>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
